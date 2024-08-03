@@ -1,0 +1,24 @@
+WORK--------------->5
+create table Hotel(h_id number(10) primary key,name varchar2(20),location varchar2(20),Address varchar2(20),city varchar2(20),Phone_no number(11)unique);
+
+create table Rooms(r_id number(10),h_id number(10) references Hotel(h_id),room_type varchar2(20),rate number(10));
+
+insert into Hotel(h_id,name,location,Address,city,Phone_no)values(01,'shakti','gujarat','shil','mangrol',13345679890);
+
+insert into Hotel(h_id,name,location,Address,city,Phone_no)values(02,'varudavan','gujarat','shil','keshod',13345679891);
+
+insert into Hotel(h_id,name,location,Address,city,Phone_no)values(03,'somnath','gujarat','shil','jungadh',13345679822);
+
+insert into Hotel(h_id,name,location,Address,city,Phone_no)values(04,'jay','gujarat','shil','veraval',14545679890);
+
+insert into Hotel(h_id,name,location,Address,city,Phone_no)values(05,'shakti','gujarat','shil','mangrol',1334567965);
+
+insert into Rooms(r_id,h_id,room_type,rate)values(11,01,'Acroom','1500');
+
+insert into Rooms(r_id,h_id,room_type,rate)values(12,02,'NonAcroom','150');
+
+insert into Rooms(r_id,h_id,room_type,rate)values(13,03,'Ac','15002');
+
+insert into Rooms(r_id,h_id,room_type,rate)values(14,04,'Ac','200');
+
+insert into Rooms(r_id,h_id,room_type,rate)values(15,05,'Ac','15000');

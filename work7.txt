@@ -1,0 +1,33 @@
+WORK---------->7
+1->create table manager(m_id number(10) primary key,name varchar2(20),location varchar2(20));
+insert into manager(m_id,name,location)values(01,'sahil','keshod');
+insert into manager(m_id,name,location)values(02,'hemantsir','keshod');
+insert into manager(m_id,name,location)values(03,'ravi','keshod');
+insert into manager(m_id,name,location)values(04,'gautam','keshod');
+insert into manager(m_id,name,location)values(05,'zahir','keshod');
+
+2->create table emplyess(e_id number(10) primary key,name varchar2(20) not null,department varchar2(20),jobtitle varchar(20),salary number(10),m_id number(10) references manager(m_id));
+insert into emplyess(e_id,name,department,jobtitle,salary,m_id)values(11,'sahil','Bca','webdeveloper',20000,01);
+
+insert into emplyess(e_id,name,department,jobtitle,salary,m_id)values(12,'sahil','Bca','Sengineer',30000,02);
+
+insert into emplyess(e_id,name,department,jobtitle,salary,m_id)values(13,'sahil','Bca','hardware',40000,03);
+
+insert into emplyess(e_id,name,department,jobtitle,salary,m_id)values(14,'sahil','Bca','abcd',50000,04);
+
+insert into emplyess(e_id,name,department,jobtitle,salary,m_id)values(15,'sahil','Bca','etc',10000,05);
+
+3>create table salary(s_id number(10),e_id number(10) references emplyess(e_id),salary number(10),Effectivedate varchar2(25),Enddate varchar2(25),notes varchar2(20));
+
+insert into salary(s_id,e_id,salary,Effectivedate,Enddate,notes)values(21,11,200,'03-04-2021','01-09-2025','hello');
+
+insert into salary(s_id,e_id,salary,Effectivedate,Enddate,notes)values(22,12,300,'04-04-2021','01-09-2025','hello');
+
+insert into salary(s_id,e_id,salary,Effectivedate,Enddate,notes)values(23,13,400,'05-04-2021','01-09-2025','hello');
+
+insert into salary(s_id,e_id,salary,Effectivedate,Enddate,notes)values(24,14,500,'06-04-2021','01-09-2025','hello');
+
+insert into salary(s_id,e_id,salary,Effectivedate,Enddate,notes)values(25,15,600,'07-04-2021','01-09-2025','hello');
+
+
+

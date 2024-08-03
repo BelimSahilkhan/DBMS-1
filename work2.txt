@@ -1,0 +1,16 @@
+
+
+
+
+WORK---------------->2
+create table emp(E_id number(5) primary key,name varchar(20),Department varchar(20));
+create table salary(S_id number(5) unique,E_id number(5) references emp(E_id),salary number(10));
+
+insert into emp(E_id,name,Department)values(011,'hemant','b.c.a');
+insert into salary(S_id,E_id,salary)values(012,011,10000);
+
+select * from emp;
+select * from salary;
+
+drop table emp;
+drop table salary;

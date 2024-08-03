@@ -1,0 +1,36 @@
+
+WORK------------->6
+create table customers(c_id number(10) unique,name varchar2(20),email varchar(20) unique,phone_no number(11),Address varchar2(20),city varchar2(20));
+
+create table orders(o_id number(20) unique,c_id number(10) references customers(c_id),orderdate varchar2(50),total number(30),status varchar2(30),paymentmethod varchar2(30));
+
+insert into customers(c_id,name,email,phone_no,Address,city)values(01,'sahil','abc@gmail.com',9904612345,'managrol','keshod');
+
+insert into customers(c_id,name,email,phone_no,Address,city)values(02,'zahir','zahir@gmail.com',9904612305,'managrol','keshod');
+
+insert into customers(c_id,name,email,phone_no,Address,city)values(03,'aryan','aryan@gmail.com',9904612348,'managrol','keshod');
+
+insert into customers(c_id,name,email,phone_no,Address,city)values(04,'ravi','ravi@gmail.com',9904613345,'managrol','keshod');
+
+insert into customers(c_id,name,email,phone_no,Address,city)values(05,'najir','najir@gmail.com',7600015002,'managrol','keshod');
+
+
+
+
+insert into orders(o_id,c_id,orderdate,total,status,paymentmethod)values(21,01,01-04-2025,200,'unmarried','online');
+
+insert into orders(o_id,c_id,orderdate,total,status,paymentmethod)values(22,02,02-04-2025,300,'unmarried','online');
+
+insert into orders(o_id,c_id,orderdate,total,status,paymentmethod)values(23,03,03-04-2025,400,'unmarried','online');
+
+insert into orders(o_id,c_id,orderdate,total,status,paymentmethod)values(24,04,04-04-2025,500,'unmarried','online');
+
+insert into orders(o_id,c_id,orderdate,total,status,paymentmethod)values(25,05,05-04-2025,600,'unmarried','online');
+
+
+
+
+
+
+
+

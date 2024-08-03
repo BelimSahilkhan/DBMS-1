@@ -1,0 +1,30 @@
+
+WORK-------------->8
+1:create table Departments(d_id number(5) primary key,name varchar2(20),location varchar2(20),m_id number(10) unique,Description varchar2(20),Budget varchar2(20));
+
+2:create table managers(m_id number(10) references Departments(d_id),mname varchar2(20),city varchar2(20),unitname varchar2(20));
+
+3:create table emply(E_id number(10) unique,d_id number(10) references Departments(d_id),jobtitle varchar2(20),salary number(6),m_id number(10) references Departments(m_id),hiredate date);
+
+
+insert into Departments(d_id,name,location,m_id,Description,Budget)values(01,'computer','keshod',11,'hello','2000');
+
+insert into Departments(d_id,name,location,m_id,Description,Budget)values(02,'computerS','managrol',12,'hello','3000');
+
+insert into Departments(d_id,name,location,m_id,Description,Budget)values(03,'computer','veraval',13,'hello','4000');
+
+insert into Departments(d_id,name,location,m_id,Description,Budget)values(04,'computer','junagadh',14,'hello','5000');
+
+insert into Departments(d_id,name,location,m_id,Description,Budget)values(05,'computer','veraval',15,'hello','6000');
+
+
+
+insert into managers(m_id,mname,city,unitname)values(01,'sahil','mangrol','abcd');
+insert into managers(m_id,mname,city,unitname)values(02,'sahil','keshod','abcd');
+insert into managers(m_id,mname,city,unitname)values(03,'sahil','veraval','abcd');
+insert into managers(m_id,mname,city,unitname)values(04,'sahil','junagadh','abcd');
+insert into managers(m_id,mname,city,unitname)values(05,'sahil','nandarkhi','abcd');
+
+
+
+

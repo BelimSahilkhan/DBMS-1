@@ -1,0 +1,166 @@
+1. 
+Customers
+    - CustomerID
+    - Name
+    - Email
+    - city
+    - Address
+    - Mobile
+Orders
+    - OrderID
+    - CustomerID
+    - OrderDate
+
+
+2. Employees
+    - EmployeeID  
+    - Name 
+    - Department 
+  Salaries
+    - SalaryID  
+    - EmployeeID  
+    - Salary 
+
+
+3. Countries 
+    - CountryID  
+    - Name 
+    - Continent 
+ States
+   - StateID
+   - CountryID
+   - Name
+Cities 
+        - CityID  
+        - CountryID
+	- StateId  
+        - Name 
+
+4. Flights 
+    - FlightID  
+    - Departure 
+    - Arrival 
+    - DepartureTime (time)
+    - ArrivalTime (time)
+    - Airline 
+Reservations  
+        - ReservationID  
+        - FlightID    
+        - SeatNumber 
+        - Fare 
+        - PaymentMethod 
+
+5. Hotels 
+    - HotelID  
+    - Name 
+    - Location 
+    - Address 
+    - City 
+    - Phone 
+Rooms  
+        - RoomID  
+        - HotelID  
+        - RoomType 
+        - Rate
+
+
+6. Customers
+    - CustomerID  
+    - Name 
+    - Email 
+    - Phone 
+    - Address 
+    - City 
+Orders  
+        - OrderID  
+        - CustomerID  
+        - OrderDate  
+        - Total 
+        - Status 
+        - PaymentMethod
+ 
+7. Employees 
+    - EmployeeID  
+    - Name 
+    - Department 
+    - JobTitle 
+    - Salary 
+    - ManagerID  
+Salaries  
+        - SalaryID  
+        - EmployeeID  
+        - Salary 
+        - EffectiveDate  
+        - EndDate  
+        - Notes 
+Manager
+	- ManagerID
+	- Name
+	- Location
+
+
+
+
+8. Departments 
+    - DepartmentID  
+    - Name 
+    - Location 
+    - ManagerID  
+    - Description 
+    - Budget 
+Employees  
+        - EmployeeID  
+        - DepartmentID  
+        - JobTitle 
+        - Salary 
+        - ManagerID  
+        - HireDate  
+Manager
+	-ManagerID
+	-ManagerName
+	-City
+	-UnitName
+
+
+9. Products 
+    - ProductID  
+    - Name 
+    - Description 
+    - Price 
+    - CategoryID  
+    - ManufacturerID  
+Sales  
+        - SaleID  
+        - ProductID  
+        - SaleDate  
+        - Quantity  
+        - Total 
+        - CustomerID  
+Manufacturer
+	-ManufacturerID
+	-UnitName
+	-TotalEmployees
+Category
+	-CategoryID
+	-CategoryName
+ Customers
+    - CustomerID  
+    - Name 
+    - Email 
+    - Phone 
+    - Address 
+    - City 
+Orders  
+        - OrderID  
+        - CustomerID  
+        - OrderDate  
+        - Total 
+        - Status 
+        - PaymentMethod
+ Suppliers 
+    - SupplierID  
+    - Name 
+    - Address 
+    - City 
+    - Phone 
+    - Email

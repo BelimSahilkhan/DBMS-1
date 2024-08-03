@@ -1,0 +1,15 @@
+
+
+WORK---------------->3
+create table country(c_id number(10) unique,name varchar2(20) primary key,contient varchar(20));
+
+create table state(s_id number(10) unique,c_id number(10)references country(c_id),name varchar2(10)references country(name));
+
+create table city(city_id number(10) primary key,c_id number(10)references country(c_id),s_id number(10)references state(s_id),
+name varchar(20) references country(name));
+
+insert into country(c_id,name,contient)values(01,'india','america');
+
+insert into state(s_id,c_id,name)values(22,02,'Gujarat');
+
+insert into city(city_id,c_id,s_id,name)values(15,01,22,'keshod');

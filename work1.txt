@@ -1,0 +1,8 @@
+create table customers(cid number(5) primary key,name varchar(20),email varchar(30) unique,city varchar(20),Address varchar(20),mobile_no number(10)unique);
+create table orders(o_id number(5),cid number(5)references customers(cid),orderdate varchar(20));
+insert into customers(cid,name,email,Address,mobile_no)values(011,'sahil','sahilkhanbelim28@gmail.com','keshod','1234567898');
+insert into orders(o_id,cid,orderdate)values(2,011,'01/09/2021');
+select * from customers;
+select * from orders;
+drop table customers;
+drop table orders;

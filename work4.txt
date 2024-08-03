@@ -1,0 +1,26 @@
+
+WORK----------------------------->4
+create table flight(f_id number(5) unique,Departure varchar2(20),Arrival varchar2(20),Departuretime varchar(20),Arrivaltime varchar(20),Airline varchar(20));
+
+create table Reservation(r_id number(5),f_id number(5) references flight(f_id),seat_no number(11),fare varchar(20),payment_method varchar(20));
+
+insert into flight(f_id,Departure,Arrival,Departuretime,Arrivaltime,Airline)values(01,'abcd','2:00','3:00','4:00','keshod');
+
+insert into flight(f_id,Departure,Arrival,Departuretime,Arrivaltime,Airline)values(02,'abc','2:00','3:00','4:00','mangrol');
+
+insert into flight(f_id,Departure,Arrival,Departuretime,Arrivaltime,Airline)values(03,'abc','2:00','3:00','4:00','junagadh');
+
+insert into flight(f_id,Departure,Arrival,Departuretime,Arrivaltime,Airline)values(04,'abc','2:00','3:00','4:00','veraval');
+
+insert into flight(f_id,Departure,Arrival,Departuretime,Arrivaltime,Airline)values(05,'abc','2:00','3:00','4:00','mt');
+
+--
+insert into Reservation(r_id,f_id,seat_no,fare,payment_method)values(11,01,21,'abcd','online');
+
+insert into Reservation(r_id,f_id,seat_no,fare,payment_method)values(12,02,22,'abcdef','online');
+
+insert into Reservation(r_id,f_id,seat_no,fare,payment_method)values(13,03,23,'sahil','online');
+
+insert into Reservation(r_id,f_id,seat_no,fare,payment_method)values(14,04,24,'hemantsir','online');
+
+insert into Reservation(r_id,f_id,seat_no,fare,payment_method)values(15,05,25,'belim','online');
